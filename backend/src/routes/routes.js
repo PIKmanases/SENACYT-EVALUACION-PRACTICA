@@ -2,9 +2,15 @@ const { Router } = require('express');
 
 const app = Router();
 
+//Rutas para el usuario
 const user = require('../controllers/users');
-//
-app.get('/hola', user.Login);
+
+app.post('/login', user.Login);
+app.put('/user/update', user.Actualizar);
+
+
+
+
 
 
 module.exports = app;
