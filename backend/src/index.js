@@ -11,9 +11,7 @@ app.use(exrpess.json());
 app.use(cors());
 
 //Rutas
-app.get('/', async(req, res)=>{
-    console.log('todo ok');
-});
+app.use(require('./routes/routes'));
 
 
 app.listen(PORT, ()=>{
