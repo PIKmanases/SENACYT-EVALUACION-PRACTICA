@@ -5,7 +5,9 @@ const query = new Querys();
 
 exports.Login = (req, res) => {
     try {
+        console.log("Realizando login");
         mysql.query(query.login(req.body.user, req.body.contrasenia), (err, result)=>{
+            console.log(result);
             if(err) throw err;
             res.status(200).json(result);
         });

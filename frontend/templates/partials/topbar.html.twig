@@ -1,0 +1,42 @@
+<!-- Topbar Start -->
+<ul class="list-unstyled topnav-menu float-right mb-0">
+    <li class="dropdown notification-list">
+    </li>
+
+    <li class="dropdown notification-list">
+        <a aria-expanded="false" aria-haspopup="false" class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button">
+            <span class="pro-user-name ml-1">
+                <em class="fas fa-user mr-2"></em>{{ "Usuaro aquí" }}
+                <i class="mdi mdi-chevron-down"></i>
+            </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+            <!-- item-->
+            <a class="dropdown-item notify-item" onclick="mostrarPantallaCarga()">
+                <i class="fe-log-out"></i>
+                <span class="small">a ver que pasa</span>
+            </a>
+        </div>
+    </li>
+</ul>
+<!-- LOGO -->
+
+<ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+    <li>
+        <button class="button-menu-mobile waves-effect waves-light" onclick="ocultarMenu()">
+            <i class="fe-menu"></i>
+        </button>
+    </li>
+</ul>
+<!-- end Topbar -->
+<script>
+    function ocultarMenu(){
+        var item = document.getElementById("leftMenu");
+        if(item.classList.contains( 'd-none' )){
+            document.getElementById("leftMenu").classList.remove("d-none");
+        }else{
+            document.getElementById("leftMenu").classList.add("d-none");
+        }
+
+    }
+</script>
